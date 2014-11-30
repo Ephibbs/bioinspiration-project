@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>graphs</title>
+	</head>
+	<style>
+		h1 {
+			text-align: center;
+			font-size: 50px;
+			margin: 30px;
+		}
+		.chart {
+			display: block;
+			margin: 100px auto;
+		}
+		.chart rect {
+		  fill: steelblue;
+		  transition: all .3s ease;
+		}
+		.chart rect:hover {
+			fill: lightblue;
+		}
+
+		.chart text {
+		  fill: #fff;
+		  font: 10px sans-serif;
+		  text-anchor: end;
+		}
+
+	</style>
+	<body>
+		<h1>Graphs</h1>
+		<svg class="chart"></svg>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script>
+			var data = [4, 8, 15, 16, 23, 42];
+			var width = 500,
+			    height = 500;
+
+			var y = d3.scale.linear()
+			    .range([height, 0]);
+
+			var chart = d3.select(".chart")
+			    .attr("width", width)
+			    .attr("height", height);
+
+			  y.domain([0, d3.max(data, function(d) { return d; })]);
+
+			  var barWidth = width / data.length;
+
+			  var bar = chart.selectAll("g")
+			      .data(data)
+			    .enter().append("g")
+			      .attr("transform", function(d, i) { return "translate(" + i * barWidth + ",0)"; });
+
+			  bar.append("rect")
+			      .attr("y", function(d) { return y(d); })
+			      .attr("height", function(d) { return height - y(d); })
+			      .attr("width", barWidth - 1);
+
+			  bar.append("text")
+			      .attr("x", barWidth / 2)
+			      .attr("y", function(d) { return y(d) + 3; })
+			      .attr("dy", "1.5em")
+			      .text(function(d) { return d; });
+		</script>
+	</body>
+</html>

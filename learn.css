@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body, html {
+	margin: 0;
+	padding: 0;
+	background: #EEE; 
+	font: normal normal normal 14px/150% Arial, Helvetica, sans-
+serif;
+}
+a, button, input {
+	transition: all ease-in-out .2s;
+	-moz-transition: all ease-in-out .2s;
+	-ms-transition: all ease-in-out .2s;
+	-o-transition: all ease-in-out .2s;
+	-webkit-transition: all ease-in-out .2s;
+}
+header input {
+    float: right;
+}
+#brand {
+	color: #09C;
+	font-family: Helvetica, sans-serif;
+	font-size: 30px;
+}
+#logo a:hover {
+	color: #2AE;
+}
+header .container {
+	max-width: 800px;
+	min-width: 200px;
+	width: 100% !important;
+	padding: 5px 50px;
+	font-size: 16px;
+	font: normal normal normal 14px/150% Arial, Helvetica, sans-
+serif !important;
+}
+section {
+	
+}
+#hero .container {
+	position: absolute;
+	top:0;bottom:0;left:0;right:0;
+	margin: auto;
+	height: 400px;
+}
+#hero signup {
+	
+}
+header {
+    background: #333;
+    padding: 10px 30px;
+    color: #fff;
+    clear: both;
+    position: relative;
+}
+
+article {
+    background: #fff;
+    margin: auto;
+    max-width: 600px;
+    padding: 30px;
+}
+
+.wrap {
+    max-width: 600px;
+    margin: auto;
+}
+
+img {
+    display: block;
+    margin: auto;
+    max-width: 600px;
+}
+
+p {
+    text-indent: 20px;
+}
+
+.wrap h1 {
+    margin: 5;
+}
