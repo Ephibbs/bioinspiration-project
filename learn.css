@@ -4,9 +4,28 @@
 body, html {
 	margin: 0;
 	padding: 0;
-	background: #EEE; 
-	font: normal normal normal 14px/150% Arial, Helvetica, sans-
+	font: normal normal normal 16px/150% Arial, Courier, Verdana, sans-
 serif;
+}
+path { 
+    stroke: #fff;
+    stroke-width: 2;
+    fill: none;
+}
+caption, table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+}
+th, td {
+    padding: 5px;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
 }
 a, button, input {
 	transition: all ease-in-out .2s;
@@ -35,48 +54,327 @@ header .container {
 	font: normal normal normal 14px/150% Arial, Helvetica, sans-
 serif !important;
 }
-section {
-	
-}
-#hero .container {
-	position: absolute;
-	top:0;bottom:0;left:0;right:0;
-	margin: auto;
-	height: 400px;
-}
-#hero signup {
-	
-}
-header {
-    background: #333;
+
+#head {
+    background: #111;
     padding: 10px 30px;
     color: #fff;
     clear: both;
     position: relative;
+    display: none;
 }
 
 article {
-    background: #fff;
     margin: auto;
-    max-width: 600px;
-    padding: 30px;
 }
 
 .wrap {
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
+    position: relative;
 }
 
-img {
+.picpair img {
+    display: inline-block;
+    width: 49%;
+}
+
+.crop img {
     display: block;
-    margin: auto;
-    max-width: 600px;
+    width: 70%;
+    height: 100%;
+}
+
+article img {
+    display: block;
+    margin: 30px auto;
+    width: 80%;
+}
+.lone {
+    max-width: 300px;
 }
 
 p {
     text-indent: 20px;
+    padding: 10px;
 }
 
 .wrap h1 {
     margin: 5;
+    margin: 10px;
+}
+#content h1 {
+    border-bottom: 1px #333 solid;
+}
+
+.caption {
+    font-size: 14px;
+    line-height: 150%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto 0px auto;
+    color: #eee;
+}
+
+.picpair {
+    margin: auto;
+    postion: relative;
+    overflow: hidden;
+}
+
+#brain {
+    margin: auto;
+    display: block;
+    height: 50px;
+}
+#brain path {
+    fill: #5AF;
+}
+header {
+    padding: 20px;
+}
+
+#rightcol {
+    float: right;
+    width: 30%;
+    padding: 2%;
+}
+
+#rightcol ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#hero .content {
+    height:240px;
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+.parallaxlayer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallaxbase {
+  transform: translateZ(0);
+}
+#hero svg {
+    margin: auto;
+    display: block;
+}
+.crop {
+    height: 200px;
+    overflow: hidden;
+}
+
+.picpair .crop {
+    width: 49%;
+    overflow: hidden;
+    float: left;
+    height: 34%;
+    postion: relative;
+}
+
+
+
+
+#neuronsim {
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+}
+
+.graph {
+    
+}
+@keyframes neuronfire {
+    0% {background: #877;}
+    10% {background: #833;}
+    100% {background: #877;}
+}
+
+@-webkit-keyframes neuronfire {
+    0% {background: #877;}
+    1% {background: #833;}
+    100% {background: #877;}
+}
+#hero {
+    height: 88%;
+    color: #EEE;
+    background: url("http://www.faseb.org/Portals/2/images/opa/BioArt/KarmacharyaR.jpg") center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    position: relative;
+}
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallaxback {
+  transform: translateZ(-1px);
+}
+
+#hero h1 {
+    font-size: 50px;
+    line-height: 110%;
+    text-shadow: 0 0 10px #333;
+    -webkit-text-shadow: 0 0 5px 50px #333;
+    -moz-text-shadow: 0 0 5px 50px #333;
+    -ms-text-shadow: 0 0 5px 5px #333;
+}
+
+#hero span {
+    font-size: 20px;
+    line-height: 110%;
+}
+
+.chart {
+    display: inline-block;
+    margin: 30px;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #EEE;
+    position: absolute;
+    z-index: -1;
+    top: 92%;
+    left: 48%;
+}
+.arrow-down:hover {
+    cursor: pointer;
+}
+
+.future {
+   background: #333;
+    position: relative;
+    z-index: -3;
+}
+
+.math {
+    text-align: center;
+    display: block;
+}
+
+blockquote {
+    font-style: italic;
+    padding: 10px;
+    position: relative;
+    background: #EEE;
+}
+blockquote::after {
+  content: "";
+ background: url(http://cdn.sunroom.co.nz/sycha.com/wp-content/uploads/2010/03/Paper-103.jpg) center;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+img {
+    width:100%;
+}
+
+.bionet {
+    height: 500px;
+    overflow: hidden;
+    background: url("http://pix4mod.com/wp-content/uploads/2014/10/Synapse-Brain-neuron-facebook-cover.jpg") center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.neuron {
+    height: 500px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background: url("assets/1280px-Neuron.png") center center fixed no-repeat; 
+  -webkit-background-size: 80%;
+  -moz-background-size: 80%;
+  -o-background-size: 80%;
+  background-size: 80%;
+}
+
+section {
+    background: #fff;
+    padding: 0 5% 5% 5%;
+    max-width: 600px;
+    margin: auto;
+}
+
+#celegansnet {
+    height: 700px;
+    background: #333; 
+    overflow: hidden;
+}
+#celegansnet svg {
+    display: block;
+    margin: auto;
+}
+
+#futureai {
+    height: 500px;
+    overflow: hidden;
+    background: url("http://files.spogel.com/enewsline/p-00826--Google-Neural-Network.jpg") center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#car {
+    height: 400px;
+    overflow: hidden;
+    background: url("assets/298px-Google's_Lexus_RX_450h_Self-Driving_Car.jpg") center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#google {
+    height: 400px;
+    overflow: hidden;
+    background: url("assets/google-datacenter-tech-13.jpg") center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#siri {
+     height: 400px;
+    overflow: hidden;
+    background: url("http://upload.wikimedia.org/wikipedia/commons/1/10/Iphone_4S_showing_Siri.jpg") center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#face {
+    height: 400px;
+    overflow: hidden;
+    background: url("http://cdni.wired.co.uk/1920x1280/g_j/google-glass-facial-recognition.jpg") center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
