@@ -1,3 +1,21 @@
+//var train_data = [new convnetjs.Vol([1.3, 0.5]), new convnetjs.Vol([0.1, 0.7])];
+//var train_labels = [0, 1];
+// 
+//// create a magic net
+//var magicNet = new convnetjs.MagicNet(train_data, train_labels);
+// 
+//// start training MagicNet. Every call trains all candidates in current batch on one example
+//setInterval(function(){ magicNet.step() }, 0});
+// 
+//// once at least one batch of candidates is evaluated on all folds we can do prediction!
+//function predict() {
+//  // prediction example. xout is Vol of scores
+//  // there is also predict_soft(), which returns the full score volume for all labels
+//  var array = 
+//  var some_test_vol = new convnetjs.Vol(array);
+//  var predicted_label = magicNet.predict(some_test_vol);
+//}
+
 var width1 = 900,
     height1 = 600;
 
